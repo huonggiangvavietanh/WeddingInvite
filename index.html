@@ -1,56 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Wedding Invitation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invite</title>
   <style>
     body {
-      font-family: "Georgia", serif;
-      text-align: center;
-      background: url("https://i.imgur.com/Uk4Kj1N.jpg") no-repeat center center/cover;
-      color: #333;
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
+      text-align: center;
+      background: #fffaf0;
     }
-    .overlay {
-      background: rgba(255,255,255,0.8);
-      padding: 40px;
-      margin: 60px auto;
-      max-width: 600px;
-      border-radius: 15px;
+
+    header {
+      background: #f7d9d9;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #b22222;
+      margin: 0;
+      font-family: "Brush Script MT", cursive;
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 60px 0;
+      gap: 40px;
+    }
+
+    .photos img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background: #eee;
     }
-    h1 {
-      font-size: 2.5em;
-      color: #b02a37;
-    }
-    h2 {
-      font-size: 1.5em;
-      margin-bottom: 20px;
-    }
-    p { font-size: 1.2em; }
-    .btn {
-      display: inline-block;
-      background: #b02a37;
-      color: white;
-      padding: 12px 25px;
-      margin-top: 20px;
-      border-radius: 25px;
-      text-decoration: none;
+
+    .middle-text {
+      font-size: 2.5rem;
       font-weight: bold;
+      color: #8b0000;
+      font-family: "Times New Roman", serif;
     }
-    .btn:hover { background: #8a1f2b; }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>💍 You're Invited!</h1>
-    <h2>Anna & James</h2>
-    <p>We are delighted to invite you to celebrate our wedding.</p>
-    <p><strong>Date:</strong> 15th November 2025</p>
-    <p><strong>Venue:</strong> Rose Garden Hall, New York</p>
-    <a href="https://forms.gle/your-rsvp-link" class="btn">RSVP Here</a>
-  </div>
+
+  <!-- Title -->
+  <header>
+    <h1>Hương Giang và Việt Anh</h1>
+  </header>
+
+  <!-- Photos with middle text -->
+  <section class="photos">
+    <img src="your-photo-1.jpg" alt="Ảnh cô dâu">
+    <div class="middle-text">Song Hỷ Lâm Môn</div>
+    <img src="your-photo-2.jpg" alt="Ảnh chú rể">
+  </section>
+
 </body>
 </html>
