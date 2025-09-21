@@ -1,110 +1,84 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invite</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invite</title>
 
-  <style>
-    /* Load fonts */
-    @font-face {
-      font-family: 'StrictFont';
-      src: url('Montserrat.ttf') format('truetype'); 
-    }
+    <style>
+      /* Load fonts */
+      @font-face {
+        font-family: 'StrictFont';
+        src: url('Montserrat.ttf') format('truetype');
+      }
 
-    @font-face {
-      font-family: 'SoftFont';
-      src: url('soft.ttf') format('truetype');
-    }
-    
-    @font-face {
-      font-family: 'Strictf';
-      src: url('saohoa.ttf') format('truetype');
-    }
+      @font-face {
+        font-family: 'SoftFont';
+        src: url('soft.ttf') format('truetype');
+      }
 
-    @font-face {
-      font-family: 'Bold';
-      src: url('bold.ttf') format('truetype');
-    }
+      @font-face {
+        font-family: 'Strictf';
+        src: url('saohoa.ttf') format('truetype');
+      }
 
-    body {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background: white; /* plain white background */
-      font-family: 'SoftFont', serif;
-    }
+      @font-face {
+        font-family: 'Bold';
+        src: url('bold.ttf') format('truetype');
+      }
 
-    header {
-      padding: 40px 20px;
-    }
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: white; /* plain white background */
+        font-family: 'SoftFont', serif;
+      }
 
-    header h1 {
-      font-size: 3.5rem;
-      color: #b1976b; /* dark beige */
-      margin: 0;
-      font-family: 'StrictFont', serif; 
-    }
+      header {
+        padding: 40px 20px;
+      }
 
-    .photos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-    }
+      header h1 {
+        font-size: 3.5rem;
+        color: #b1976b; /* dark beige */
+        margin: 0;
+        font-family: 'StrictFont', serif;
+      }
 
-    .photos img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+      .photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
 
-    .middle-text {
-      font-size: 2.5rem;
-      color: #b1976b;
-      margin: 20px 0;
-      font-family: 'SoftFont', serif;
-    }
+      .photos img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    /* New section after photos */
-    .after-photos {
-      margin-top: 40px;
-    }
+      .middle-text {
+        font-size: 2.5rem;
+        color: #b1976b;
+        margin: 20px 0;
+        font-family: 'SoftFont', serif;
+      }
+    </style>
+  </head>
 
-    .after-photos .title-black {
-      font-size: 3.5rem;
-      color: black;
-      margin: 0;
-      font-family: 'StrictFont', serif;
-    }
+  <body>
+    <!-- Title -->
+    <header>
+      <h1>Hương Giang và Việt Anh</h1>
+    </header>
 
-    .after-photos .invite-text {
-      font-size: 2rem;
-      color: black;
-      margin-top: 15px;
-      font-family: 'Strictf', serif;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Title -->
-  <header>
-    <h1>Hương Giang và Việt Anh</h1>
-  </header>
-
-  <!-- Photos stacked with middle text -->
-  <section class="photos">
-    <img src="anh1.jpg" alt="Ảnh cô dâu">
-    <div class="middle-text">Song Hỷ Lâm Môn</div>
-    <img src="anh2.jpg" alt="Ảnh chú rể">
-  </section>
-
-  <!-- After photos section -->
-  <section class="after-photos">
-    <h1 class="title-black">Hương Giang và Việt Anh</h1>
-    <div class="invite-text">TRÂN TRỌNG KÍNH MỜI</div>
-  </section>
-
-</body>
+    <!-- Photos stacked with middle text -->
+    <section class="photos">
+      <img src="anh1.jpg" alt="Ảnh cô dâu">
+      <div class="middle-text">Song Hỷ Lâm Môn</div>
+      <img src="anh2.jpg" alt="Ảnh chú rể">
+    </section>
+  </body>
 </html>
