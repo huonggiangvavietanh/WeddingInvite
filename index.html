@@ -4,16 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invite</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
   <style>
+    /* Load fonts */
+    @font-face {
+      font-family: 'StrictFont';
+      src: url('Strict.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'SoftFont';
+      src: url('soft.ttf') format('truetype');
+    }
+
     body {
       margin: 0;
       padding: 0;
       text-align: center;
-      font-family: 'Merriweather', serif;
-      background: url("https://www.transparenttextures.com/patterns/paper-fibers.png"); 
-      /* paper texture background */
+      background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+      font-family: 'SoftFont', serif;
     }
 
     header {
@@ -24,7 +33,7 @@
       font-size: 3.5rem;
       color: #b1976b; /* dark beige */
       margin: 0;
-      font-family: 'Parisienne', cursive;
+      font-family: 'StrictFont', cursive;
     }
 
     .photos {
@@ -42,10 +51,9 @@
 
     .middle-text {
       font-size: 2.5rem;
-      font-weight: bold;
       color: #b1976b;
       margin: 20px 0;
-      font-family: 'Merriweather', serif;
+      font-family: 'SoftFont', serif;
     }
   </style>
 </head>
@@ -60,7 +68,7 @@
   <section class="photos">
     <img src="anh1.jpg" alt="Ảnh cô dâu">
     <div class="middle-text">Song Hỷ Lâm Môn</div>
-    <img src="anh2.jpg" alt="Ảnh chú rể">
+    <img src="anh2.jpeg" alt="Ảnh chú rể">
   </section>
 
 </body>
