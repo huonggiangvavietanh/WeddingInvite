@@ -148,22 +148,36 @@
   color: #6f5c2d;
 }
 
-/* Middle row grid fix (closer to center) */
+/* Middle row grid with asymmetric spacing */
 .date-row.middle {
   display: grid;
-  grid-template-columns: auto auto auto; /* shrink to content */
+  grid-template-columns: auto auto auto; /* left, middle, right */
   align-items: center;
   justify-content: center;
-  column-gap: 40px; /* control spacing between them */
 }
+
 .date-row.middle span {
   text-align: center;
 }
+
+/* Make the big day number stay centered */
 .date-row.middle .big {
   font-size: 3rem;
   font-weight: bold;
-  color: #6f5c2d; /* goldish */
+  color: #6f5c2d;
+  margin: 0 25px; /* left margin smaller, right margin bigger */
 }
+
+/* Left text (closer) */
+.date-row.middle span:first-child {
+  margin-right: 20px; 
+}
+
+/* Right text (further away) */
+.date-row.middle span:last-child {
+  margin-left: 20px; 
+}
+
       
     </style>
   </head>
