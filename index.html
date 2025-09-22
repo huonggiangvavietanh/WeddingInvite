@@ -103,10 +103,57 @@
       }
 
       .after-photos .names {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         color: #b1976b;
         margin-top: 35px; /* increased space above */
         font-family: 'Strictf', cursive;
+      }
+      .after-photos .and {
+        font-size: 3.5rem;
+        color: #b1976b;
+        margin-top: 15px; 
+        font-family: 'Strictf', cursive;
+      }
+
+      /* Date block */
+      .date-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 20px;
+      }
+
+      .date-block .line {
+        flex: 1;
+        border-top: 2px solid #b1976b;
+      }
+
+      .date-block .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'StrictFont', serif;
+      }
+
+      .date-block .content .top {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 1.2rem;
+        color: black;
+      }
+      
+      .date-block .content .day {
+        font-size: 3rem;
+        color: #6f5c2d; /* dark olive-brown for highlight */
+        font-weight: bold;
+        margin: 5px 0;
+      }
+
+      .date-block .content .year {
+        font-size: 1.5rem;
+        color: black;
       }
 
 
@@ -131,10 +178,23 @@
       <div class="participate">DỰ BỮA TIỆC THÂN MẬT MỪNG LỄ THÀNH HÔN</div>
       <div class="participate">CÙNG GIA ĐÌNH CHÚNG TÔI</div>
       <div class="names">NINH HƯƠNG GIANG</div>
-      <div class="names">&</div>
+      <div class="and">&</div>
       <div class="names">VŨ VIỆT ANH</div>
-      
-      
+
+    <!-- Date block -->
+    <section class="date-block">
+      <div class="line"></div>
+      <div class="content">
+        <div class="top">
+          <div>VÀO LÚC 18H00</div>
+          <div>THÁNG 1</div>
+          <div>CHỦ NHẬT</div>
+        </div>
+        <div class="day">05</div>
+        <div class="year">2025</div>
+      </div>
+      <div class="line"></div>
     </section>
+      
   </body>
 </html>
