@@ -97,7 +97,7 @@
       }
 
       .after-photos .participate {
-        font-size: 1rem;
+        font-size: 1.25rem;
         color: black;
         margin-top: 15px;
         font-family: 'StrictFont', serif;
@@ -145,11 +145,15 @@
 .date-row .big {
   font-size: 3rem;
   font-weight: bold;
-  color: #6f5c2d; /* highlight number */
+  color: #6f5c2d;
 }
 
-
-
+/* Middle row grid fix */
+.date-row.middle {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left, center, right */
+  align-items: center;
+}
       
     </style>
   </head>
@@ -184,10 +188,10 @@
       </div>
     
       <!-- Middle row -->
-      <div class="date-row">
-        <span>VÀO LÚC 18H00</span>
+      <div class="date-row middle">
+        <span style="text-align:left;">VÀO LÚC 18H00</span>
         <span class="big">05</span>
-        <span>CHỦ NHẬT</span>
+        <span style="text-align:right;">CHỦ NHẬT</span>
       </div>
     
       <!-- Bottom row -->
@@ -197,7 +201,5 @@
         <div class="line"></div>
       </div>
     </section>
-
-      
   </body>
 </html>
