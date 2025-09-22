@@ -1,107 +1,118 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invite</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invite</title>
 
-  <style>
-    /* Load fonts */
-    @font-face {
-      font-family: 'StrictFont';
-      src: url('Montserrat.ttf') format('truetype'); 
-    }
+    <!-- Google Font Dancing Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-    @font-face {
-      font-family: 'SoftFont';
-      src: url('soft.ttf') format('truetype');
-    }
-    
-    @font-face {
-      font-family: 'Strictf';
-      src: url('saohoa.ttf') format('truetype');
-    }
+    <style>
+      /* Load local fonts */
+      @font-face {
+        font-family: 'StrictFont';
+        src: url('Montserrat.ttf') format('truetype');
+      }
 
-    @font-face {
-      font-family: 'Bold';
-      src: url('bold.ttf') format('truetype');
-    }
+      @font-face {
+        font-family: 'SoftFont';
+        src: url('soft.ttf') format('truetype');
+      }
 
-    body {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background: white; /* plain white background */
-      font-family: 'SoftFont', serif;
-    }
+      @font-face {
+        font-family: 'Strictf';
+        src: url('saohoa.ttf') format('truetype');
+      }
 
-    header {
-      padding: 40px 20px;
-    }
+      @font-face {
+        font-family: 'Bold';
+        src: url('bold.ttf') format('truetype');
+      }
 
-    header h1 {
-      font-size: 3.5rem;
-      color: #b1976b; /* dark beige */
-      margin: 0;
-      font-family: 'StrictFont', serif; 
-    }
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: white; /* plain white background */
+        font-family: 'SoftFont', serif;
+      }
 
-    .photos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-    }
+      header {
+        padding: 40px 20px;
+      }
 
-    .photos img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+      header h1 {
+        font-size: 3.5rem;
+        color: #b1976b; /* dark beige */
+        margin: 0;
+        font-family: 'StrictFont', serif;
+      }
 
-    .middle-text {
-      font-size: 2.5rem;
-      color: #b1976b;
-      margin: 20px 0;
-      font-family: 'SoftFont', serif;
-    }
+      .photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
 
-    /* New section after photos */
-    .after-photos {
-      margin-top: 40px;
-    }
+      .photos img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    .after-photos .title-black {
-      font-size: 3.5rem;
-      color: black;
-      margin: 0;
-      font-family: 'StrictFont', serif;
-    }
+      .middle-text {
+        font-size: 2.5rem;
+        color: #b1976b;
+        margin: 20px 0;
+        font-family: 'SoftFont', serif;
+      }
 
-    .after-photos .invite-text {
-      font-size: 2rem;
-      color: black;
-      margin-top: 15px;
-      font-family: 'Strictf', serif;
-    }
-  </style>
-</head>
-<body>
+      /* Section after photos */
+      .after-photos {
+        margin-top: 40px;
+      }
 
+      .after-photos .title-black {
+        font-size: 3.5rem;
+        color: black;
+        margin: 0;
+        font-family: 'StrictFont', serif;
+      }
 
+      .after-photos .invite-text {
+        font-size: 2rem;
+        color: black;
+        margin-top: 15px;
+        font-family: 'Strictf', serif;
+      }
 
-  <!-- Photos stacked with middle text -->
-  <section class="photos">
-    <img src="anh1.jpg" alt="Ảnh cô dâu">
-    <div class="middle-text">Song Hỷ Lâm Môn</div>
-    <img src="anh2.jpg" alt="Ảnh chú rể">
-  </section>
+      .after-photos .guest-text {
+        font-size: 2.5rem;
+        color: #b1976b;
+        margin-top: 35px; /* increased space above */
+        font-family: 'Dancing Script', cursive;
+        text-decoration: underline;
+        text-decoration-color: #b1976b;
+      }
+    </style>
+  </head>
 
-  <!-- After photos section -->
-  <section class="after-photos">
-    <h1 class="title-black">Hương Giang và Việt Anh</h1>
-    <div class="invite-text">TRÂN TRỌNG KÍNH MỜI</div>
-  </section>
+  <body>
 
-</body>
+    <!-- Photos stacked with middle text -->
+    <section class="photos">
+      <img src="anh1.jpg" alt="Ảnh cô dâu">
+      <div class="middle-text">Song Hỷ Lâm Môn</div>
+      <img src="anh2.jpg" alt="Ảnh chú rể">
+    </section>
+
+    <!-- After photos section -->
+    <section class="after-photos">
+      <h1 class="title-black">Hương Giang và Việt Anh</h1>
+      <div class="invite-text">TRÂN TRỌNG KÍNH MỜI</div>
+      <div class="guest-text">Quý khách</div>
+    </section>
+  </body>
 </html>
