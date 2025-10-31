@@ -148,34 +148,27 @@
   color: #6f5c2d;
 }
 
-/* Middle row grid with asymmetric spacing */
+/* Middle row grid with centered big number */
+/* Use 1fr auto 1fr so the center column (the big number) stays centered in the whole row */
 .date-row.middle {
   display: grid;
-  grid-template-columns: auto auto auto; /* left, middle, right */
+  grid-template-columns: 1fr auto 1fr; /* left fills, center auto, right fills */
   align-items: center;
-  justify-content: center;
+  justify-items: center; /* center items in their grid cells */
+  gap: 10px; /* small gap between columns */
 }
 
-.date-row.middle span {
-  text-align: center;
-}
-
-/* Make the big day number stay centered */
+/* Ensure the center big number has no extra offsets */
 .date-row.middle .big {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #6f5c2d;
-  margin: 0 25px; /* left margin smaller, right margin bigger */
+  margin: 0;
 }
 
-/* Left text (closer) */
-.date-row.middle span:first-child {
-  margin-right: 20px; 
-}
-
-/* Right text (further away) */
+/* Left and right text alignments -- keep them visually close but don't shift the center */
+.date-row.middle span:first-child,
 .date-row.middle span:last-child {
-  margin-left: 20px; 
+  font-size: 1.1rem;
+  color: black;
+  white-space: nowrap;
 }
 
       
@@ -215,7 +208,7 @@
         <div class="date-row middle">
           <span>VÀO LÚC 18H00</span>
           <span class="big">05</span>
-          <span>CHỦ NHẬT     </span>
+          <span>CHỦ NHẬT</span>
         </div>
 
 
