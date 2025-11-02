@@ -138,7 +138,7 @@
         white-space: nowrap;
       }
 
-      /* TIMELINE / Venue block (adjusted background & larger type) */
+      /* TIMELINE / Venue block (updated: bigger type & warm background) */
       .timeline-section {
         background: var(--timeline-bg); /* now matches other warm block */
         color: var(--dark-brown);
@@ -238,7 +238,13 @@
         color: var(--dark-brown);
       }
 
-      /* decorative pseudo-icons (darker and lower opacity to match warm bg) */
+      /* Replace the small decorative icons with the 3 provided images
+         The files you added are used here in this order:
+           - flower.png  -> ĐÓN KHÁCH (time-1)
+           - invite.png  -> LÀM LỄ   (time-2)
+           - wine.png    -> KHAI TIỆC (time-3)
+         Place these files next to index.html (or adjust the paths below if they're in a subfolder).
+      */
       .timeline-item::before {
         content: "";
         display: block;
@@ -246,19 +252,19 @@
         height: 56px;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 44px;
-        opacity: 0.08;
+        background-size: contain;
+        opacity: 0.12;
         margin: 0 auto 12px;
       }
 
       .timeline-item.time-1::before {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke=%22%233d2f1f%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2%22></path><circle cx=%2212%22 cy=%227%22 r=%224%22></circle></svg>');
+        background-image: url('flower.png');
       }
       .timeline-item.time-2::before {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke=%22%233d2f1f%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M21 10l-9 6-9-6%22></path></svg>');
+        background-image: url('invite.png');
       }
       .timeline-item.time-3::before {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke=%22%233d2f1f%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7%22></path><path d=%22M7 10a5 5 0 0 1 10 0%22></path></svg>');
+        background-image: url('wine.png');
       }
 
       .timeline-list::after {
