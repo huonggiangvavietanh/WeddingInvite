@@ -33,6 +33,8 @@
         --timeline-bg: var(--warm-bg);
         --dark-brown: #3d2f1f;
         --muted-white: #f3f1f0;
+        --rsvp-dark: #1b1414; /* dark background for RSVP (matches provided screenshot) */
+        --rsvp-accent: #b1976b;
       }
 
       body {
@@ -238,13 +240,7 @@
         color: var(--dark-brown);
       }
 
-      /* Replace the small decorative icons with the 3 provided images
-         The files you added are used here in this order:
-           - flower.png  -> ĐÓN KHÁCH (time-1)
-           - invite.png  -> LÀM LỄ   (time-2)
-           - wine.png    -> KHAI TIỆC (time-3)
-         Place these files next to index.html (or adjust the paths below if they're in a subfolder).
-      */
+      /* Timeline icons (we already linked your images earlier) */
       .timeline-item::before {
         content: "";
         display: block;
@@ -256,16 +252,9 @@
         opacity: 0.12;
         margin: 0 auto 12px;
       }
-
-      .timeline-item.time-1::before {
-        background-image: url('flower.png');
-      }
-      .timeline-item.time-2::before {
-        background-image: url('invite.png');
-      }
-      .timeline-item.time-3::before {
-        background-image: url('wine.png');
-      }
+      .timeline-item.time-1::before { background-image: url('flower.png'); }
+      .timeline-item.time-2::before { background-image: url('invite.png'); }
+      .timeline-item.time-3::before { background-image: url('wine.png'); }
 
       .timeline-list::after {
         content: "";
@@ -276,14 +265,92 @@
         margin: 12px auto 0;
       }
 
-      /* responsive adjustments */
-      @media (max-width: 860px) {
-        .parents-grid { flex-direction: column; gap: 10px; }
-        .parents-grid .col { text-align: center; }
-        .timeline-inner { padding: 18px; }
-        .timeline-item::before { width: 48px; height: 48px; background-size: 36px; margin-bottom: 10px; }
-        .venue .venue-name { font-size: 1.15rem; }
-        .timeline-title { font-size: 1.35rem; }
+      /* RSVP block styles */
+      .rsvp-section {
+        background: var(--rsvp-dark);
+        color: #e6dfdc;
+        padding: 44px 18px;
+        font-family: 'StrictFont', serif;
+      }
+
+      .rsvp-inner {
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .rsvp-title {
+        text-align: center;
+        color: var(--rsvp-accent);
+        font-family: 'Strictf', cursive;
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+      }
+
+      .rsvp p.lead {
+        color: #d8d0cc;
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+        line-height: 1.5;
+      }
+
+      .rsvp-form label {
+        display: block;
+        font-size: 0.9rem;
+        color: #e6dfdc;
+        margin-bottom: 6px;
+      }
+
+      .rsvp-form input[type="text"],
+      .rsvp-form select,
+      .rsvp-form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.02);
+        color: #efe9e6;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+        margin-bottom: 14px;
+      }
+
+      .rsvp-form textarea { min-height: 120px; resize: vertical; }
+
+      .rsvp-form .submit-btn {
+        display: inline-block;
+        background: var(--rsvp-accent);
+        color: #fff;
+        padding: 12px 22px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.98rem;
+        font-weight: 700;
+        margin-top: 4px;
+      }
+
+      .rsvp-form .small-note {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.82rem;
+        color: #cfc6c2;
+      }
+
+      /* simple success message display after JS submit */
+      .rsvp-success {
+        display: none;
+        background: rgba(255,255,255,0.03);
+        padding: 12px;
+        border-radius: 6px;
+        color: #e8ddd6;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      @media (max-width: 520px) {
+        .rsvp-inner { padding: 0 12px; }
+        .rsvp-title { font-size: 1.35rem; }
       }
 
     </style>
@@ -300,7 +367,6 @@
 
     <!-- After photos section -->
     <section class="after-photos">
-      <!-- The original H1 "Hương Giang và Việt Anh" was removed earlier per request -->
       <div class="invite-text">TRÂN TRỌNG KÍNH MỜI</div>
       <div class="guest-text">Quý khách</div>
       <div class="participate">DỰ BỮA TIỆC THÂN MẬT MỪNG LỄ THÀNH HÔN</div>
@@ -312,21 +378,18 @@
 
     <!-- Date block -->
     <section class="date-block">
-      <!-- Top row -->
       <div class="date-row">
         <div class="line"></div>
         <span>THÁNG 1</span>
         <div class="line"></div>
       </div>
 
-      <!-- Middle row -->
       <div class="date-row middle">
         <span>VÀO LÚC 18H00</span>
         <span class="big">05</span>
         <span>CHỦ NHẬT</span>
       </div>
 
-      <!-- Bottom row -->
       <div class="date-row">
         <div class="line"></div>
         <span>2025</span>
@@ -334,7 +397,7 @@
       </div>
     </section>
 
-    <!-- TIMELINE / Venue block (updated: bigger type & warm background) -->
+    <!-- TIMELINE / Venue block -->
     <section class="timeline-section" aria-label="Timeline and venue">
       <div class="timeline-inner">
         <div class="venue">
@@ -377,6 +440,77 @@
         </div>
       </div>
     </section>
+
+    <!-- RSVP block (id="rsvp") -->
+    <section id="rsvp" class="rsvp-section" aria-labelledby="rsvp-heading">
+      <div class="rsvp-inner">
+        <h2 id="rsvp-heading" class="rsvp-title">BẠN SẼ ĐẾN</h2>
+        <p class="lead">Đám cưới của chúng tôi sẽ trọn vẹn hơn khi có thêm lời chúc, niềm vui và sự hiện diện của các bạn. Xin hãy xác nhận sự có mặt của mình để chúng tôi chuẩn bị đón tiếp một cách chu đáo nhất.</p>
+
+        <!-- Form submits to formsubmit.co which will forward submissions to the given email.
+             Note: On first submit FormSubmit will send a verification email to huonggiangvavietanh@gmail.com.
+             After confirming the email, submissions will be delivered there.
+             If you prefer another service (EmailJS, server endpoint), let me know and I can adapt the code. -->
+        <form class="rsvp-form" method="POST" action="https://formsubmit.co/huonggiangvavietanh@gmail.com">
+          <!-- Anti-bot honeypot -->
+          <input type="text" name="_honey" style="display:none">
+          <!-- Optional: customize subject (visible in received email) -->
+          <input type="hidden" name="_subject" value="RSVP submission from website">
+          <!-- Optional: disable default FormSubmit captcha (requires confirmation) -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Optional: redirect after submit (change to your desired page) -->
+          <input type="hidden" name="_next" value="https://raw.githack.com/huonggiangvavietanh/WeddingInvite/middle-05/index.html">
+
+          <label for="r_name">Tên của Quý khách*</label>
+          <input id="r_name" name="Tên" type="text" placeholder="Your name" required>
+
+          <label for="r_attend">Quý khách sẽ tham dự chứ?</label>
+          <select id="r_attend" name="Tham dự" required>
+            <option value="Chắc chắn rồi">Chắc chắn rồi</option>
+            <option value="Có thể">Có thể</option>
+            <option value="Không thể">Không thể</option>
+          </select>
+
+          <label for="r_count">Số người tham dự *</label>
+          <select id="r_count" name="Số người" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <label for="r_message">Gửi những lời chúc tốt đẹp nhất</label>
+          <textarea id="r_message" name="Lời chúc" placeholder="Type here or Film a video to let us have your kind blessings"></textarea>
+
+          <button type="submit" class="submit-btn">Gửi Lời Chúc</button>
+
+          <span class="small-note">Khi gửi, bản ghi RSVP sẽ được gửi tới: huonggiangvavietanh@gmail.com</span>
+
+          <div class="rsvp-success" id="rsvp-success">Cảm ơn! Lời chúc của bạn đã được gửi.</div>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      // Small client-side UX: show a success message after submit (works with FormSubmit redirect disabled)
+      (function() {
+        const form = document.querySelector('.rsvp-form');
+        const success = document.getElementById('rsvp-success');
+
+        // If FormSubmit redirects to _next, this won't run. It's just additional UX for cases where JS handles the submit.
+        form.addEventListener('submit', function(e) {
+          // allow normal submit to happen so FormSubmit receives the data
+          // Here we optionally show a temporary success message when the user stays on page.
+          // We delay showing it so the browser can start the request.
+          setTimeout(() => {
+            success.style.display = 'block';
+            // hide after a few seconds
+            setTimeout(() => success.style.display = 'none', 6000);
+          }, 400);
+        });
+      })();
+    </script>
 
   </body>
 </html>
