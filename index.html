@@ -427,6 +427,16 @@
 
   <body>
 
+    <!-- HTML-only audio control
+         - Put music.mp3 in the same folder as index.html OR change src to your hosted URL.
+         - browsers may block audible autoplay; users can press the built-in controls if that happens.
+         - If you prefer browsers to allow autoplay silently you can add the 'muted' attribute,
+           but that will start playback muted.
+    -->
+    <audio id="bg-music" src="music.mp3" preload="auto" autoplay loop controls playsinline>
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+
     <!-- Photos stacked with middle text -->
     <section class="photos">
       <img src="anh1.jpg" alt="Ảnh cô dâu">
@@ -495,7 +505,7 @@
     <section id="rsvp" class="rsvp-section" aria-labelledby="rsvp-heading">
       <div class="rsvp-inner">
         <h2 id="rsvp-heading" class="rsvp-title">BẠN SẼ ĐẾN</h2>
-        <p class="lead">Đám cưới của chúng tôi sẽ trọn vẹn hơn khi có thêm lời chúc, niềm vui và sự hiện diện của các bạn. Xin hãy xác nhận sự có mặt của mình để chúng tôi chuẩn bị đón tiếp một cách chu đáo nhất.</p>
+        <p class="lead">Đám cưới của chúng tôi sẽ trọn vẹn hơn khi có thêm lời chúc, niềm vui và sự hiện diện của [...]
 
         <form class="rsvp-form" method="POST" action="https://formsubmit.co/huonggiangvavietanh@gmail.com">
           <input type="text" name="_honey" style="display:none">
@@ -544,7 +554,7 @@
           <!-- iframe uses a public embed url that searches for Melia Hanoi.
                If you prefer a different location or a precise lat/lng, replace the q= value. -->
           <a class="map-cta" href="https://maps.app.goo.gl/DmTQwXb3zA5JxEKN6" target="_blank" rel="noopener">Xem bản đồ lớn hơn</a>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8661083653305!2d105.7916308759699!3d21.038042687458354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab3825b81c07%3A0x95ef3aeb3d5bf0f!2zVHLhu5FuZyDEkOG7k25nIFBhbGFjZQ!5e0!3m2!1sen!2s!4v1764825331982!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8661083653305!2d105.7916308759699!3d21.038042687458354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab3825b[...]
           72 TRẦN ĐĂNG NINH - DỊCH VỌNG - CẦU GIẤY - TP. HÀ NỘI</iframe>
         </div>
 
