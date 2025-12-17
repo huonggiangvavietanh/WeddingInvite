@@ -563,22 +563,5 @@
         </a>
       </div>
     </section>
-
-    <script>
-      // Small UX: show a success message after submit (works while formsubmit is processing)
-      (function() {
-        const form = document.querySelector('.rsvp-form');
-        const success = document.getElementById('rsvp-success');
-        if (!form) return;
-        form.addEventListener('submit', function() {
-          // show a quick inline confirmation while the browser sends the form
-          setTimeout(() => {
-            success.style.display = 'block';
-            setTimeout(() => success.style.display = 'none', 6000);
-          }, 400);
-        });
-      })();
-    </script>
-
   </body>
 </html>
